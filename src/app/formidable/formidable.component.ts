@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formidable',
@@ -10,7 +10,11 @@ export class FormidableComponent implements OnInit {
 
 
   myForm = new FormGroup({
-    myinput : new FormControl('custom value')
+    myinput : new FormControl('',Validators.email),
+    address : new FormGroup({
+      zipcode : new FormControl('',Validators.required),
+      address : new FormControl('',[ Validators.minLength(3), Validators.required ])
+    })
   });
 
   constructor() { }
@@ -21,7 +25,7 @@ export class FormidableComponent implements OnInit {
 
   submit(){
     console.log("event submit triggred");
-    console.log(this.myForm.value);
+    console.log(this.myForm);
     
     
   }

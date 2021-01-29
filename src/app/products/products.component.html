@@ -1,0 +1,16 @@
+
+<button class="btn btn-danger" (click)="logout()">LOG OUT</button>
+
+<ul>
+    <li *ngFor=" let p of products ">
+        <h3>{{ p.title | uppercase }}</h3>
+        <p>
+            add date : {{ p.addDate | date:'medium' }} <br/>
+
+            price : {{ p.price | number }} <br>
+            phone : {{ p.phone | hash }} <br>
+            
+        </p>
+    </li>
+</ul>
+
