@@ -27,7 +27,7 @@ today is : <br/>
 <!--  this is a comment -->
 
 
-<nav>
+<!--<nav>
   <a routerLink="/products">products</a>
   <a routerLink="/about">about</a>
   <a routerLink="/auth">auth</a>
@@ -35,6 +35,25 @@ today is : <br/>
   
 </nav>
 
+-->
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="shop" >My shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item " routerLinkActive="active" >
+          <a class="nav-link" routerLink="shop" >Shop</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="cart">cart {{cart.getProductsLength()}} </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +10,19 @@ export class AppComponent {
 
   isDisabled = true;
 
-  constructor(){
-    console.log("main app constructor");
+  constructor( public cart:CartService ){
+
+    
+
+    /*console.log("main app constructor");
     
     setTimeout(() => {
       this.isDisabled = ! this.isDisabled
-    }, 4000);
+    }, 4000);*/
 
   }
 
-
+/*
   title = 'hello world';
 
   date = new Date();
@@ -32,7 +36,7 @@ export class AppComponent {
     { avatar:'../assets/1.png', fullname:"employee 1" , phonenumber: 44558899 , isnew : false , exp:[] },
     
   
-  ];
+  ];*/
 
   
 

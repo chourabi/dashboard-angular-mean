@@ -1,0 +1,20 @@
+
+
+
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col-md-12">
+            
+            <h3>Total to pay  : {{ total | currency }}</h3>
+            <div class="row">
+
+                <div *ngFor="let p of products " class="col-sm-4">
+                    <app-product [p]="p" ></app-product>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

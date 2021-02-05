@@ -9,7 +9,12 @@ import { ProductsComponent } from './products/products.component';
 import { HashPipe } from './hash.pipe';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
-import { SigininComponent } from './siginin/siginin.component'; 
+import { SigininComponent } from './siginin/siginin.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductComponent } from './product/product.component';
+import { DetailsComponent } from './details/details.component';
+import { NotfoundComponent } from './notfound/notfound.component'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { SigininComponent } from './siginin/siginin.component';
     HashPipe,
     MainComponent,
     AboutComponent,
-    SigininComponent
+    SigininComponent,
+    ShopComponent,
+    CartComponent,
+    ProductComponent,
+    DetailsComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
