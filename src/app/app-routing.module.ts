@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { DetailsComponent } from './details/details.component';
 import { FormidableComponent } from './formidable/formidable.component';
 import { MainComponent } from './main/main.component';
+import { MapComponent } from './map/map.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
@@ -36,8 +37,11 @@ const routes: Routes = [
 
   { path:'' , component:ShopComponent },
   { path:'shop' , component:ShopComponent },
+  { path:'map' , component:MapComponent },
+  
   { path:'cart' , component:CartComponent },
   { path:'details/:id' , component:DetailsComponent },
+  { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
   { path:'**' , component:NotfoundComponent },
   
   
